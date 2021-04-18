@@ -1,7 +1,7 @@
 [![Discord](https://img.shields.io/discord/769207196608102430?label=discord)](https://discord.gg/JaRmMmTsEN)
 [![ENet version](https://img.shields.io/badge/enet-1.3.17-green)](https://github.com/moien007/enet)
 ![Language](https://img.shields.io/github/languages/top/fyrax-exe/bucketware)
-## This is now just design view hacks not working yet
+## This project isnt ready!
 ## Bucketware
 Free opensource growtopia autofarm/hack tool coded with c#, using enet for proxy(Proxy - growbrew by playingodeerux)
 Design inspired from Nightfarm
