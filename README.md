@@ -1,6 +1,7 @@
 [![Discord](https://img.shields.io/discord/769207196608102430?label=discord)](https://discord.gg/JaRmMmTsEN)
 [![ENet version](https://img.shields.io/badge/enet-1.3.17-green)](https://github.com/moien007/enet)
 ![Language](https://img.shields.io/github/languages/top/fyrax-exe/bucketware)
+# For now this uses really much cpu but i will optimize it later
 ## This project isnt ready!
 This project is still indev, so its not ready to use fully
 if you have any questions about this project you can ask them at discord my discord is:Fyrax#7192
