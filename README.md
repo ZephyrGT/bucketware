@@ -3,6 +3,7 @@
 ![Language](https://img.shields.io/github/languages/top/fyrax-exe/bucketware)
 ## This project isnt ready!
 This project is still indev, so its not ready to use fully
+if you have any questions about this project you can ask them at discord my discord is:Fyrax#7192
 ## Bucketware
 Free opensource growtopia autofarm/hack tool coded with c#, using enet for proxy(Proxy - growbrew by playingodeerux)
 Design inspired from Nightfarm
