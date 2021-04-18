@@ -17,7 +17,6 @@ F:\Growtopia Hack\Bucketware\Bucketware\bin\x64\Debug\System.Memory.xml
 F:\Growtopia Hack\Bucketware\Bucketware\bin\x64\Debug\System.Numerics.Vectors.xml
 F:\Growtopia Hack\Bucketware\Bucketware\bin\x64\Debug\System.Runtime.CompilerServices.Unsafe.xml
 F:\Growtopia Hack\Bucketware\Bucketware\bin\x64\Debug\System.Security.Principal.Windows.xml
-F:\Growtopia Hack\Bucketware\Bucketware\obj\x64\Debug\Bucketware.csprojAssemblyReference.cache
 F:\Growtopia Hack\Bucketware\Bucketware\obj\x64\Debug\Bucketware.Layouts.Launcher.resources
 F:\Growtopia Hack\Bucketware\Bucketware\obj\x64\Debug\Bucketware.Properties.Resources.resources
 F:\Growtopia Hack\Bucketware\Bucketware\obj\x64\Debug\Bucketware.csproj.GenerateResource.cache
@@ -29,3 +28,4 @@ F:\Growtopia Hack\Bucketware\Bucketware\obj\x64\Debug\Bucketware.Layouts.MainFor
 F:\Growtopia Hack\Bucketware\Bucketware\bin\x64\Debug\ENet.Managed.dll
 F:\Growtopia Hack\Bucketware\Bucketware\bin\x64\Debug\ENet.Managed.pdb
 F:\Growtopia Hack\Bucketware\Bucketware\bin\x64\Debug\ENet.Managed.xml
+F:\Growtopia Hack\Bucketware\Bucketware\obj\x64\Debug\Bucketware.csprojAssemblyReference.cache

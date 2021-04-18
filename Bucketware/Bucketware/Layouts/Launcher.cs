@@ -64,6 +64,7 @@ namespace Bucketware.Layouts
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             Process.Start(path);
+            this.Hide();
             MainForm mf = new MainForm();
             mf.Show();
             mf.BringToFront();

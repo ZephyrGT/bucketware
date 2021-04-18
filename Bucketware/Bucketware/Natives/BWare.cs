@@ -7,9 +7,34 @@ using Guna.UI2;
 using System.Windows.Forms;
 using System.Drawing;
 using Bucketware.Layouts;
+using System.Timers;
+using System.Windows.Input;
+using System.Windows.Automation;
+using System.Diagnostics;
 
 namespace Bucketware.Natives
 {
+    public class FocusMonitor//https://stackoverflow.com/questions/2183541/c-detecting-which-application-has-focus
+    {
+        public FocusMonitor()
+        {
+            AutomationFocusChangedEventHandler focusHandler = OnFocusChanged;
+            Automation.AddAutomationFocusChangedEventHandler(focusHandler);
+        }
+
+        public static void OnFocusChanged(object sender, AutomationFocusChangedEventArgs e)
+        {
+            AutomationElement focusedElement = sender as AutomationElement;
+            if (focusedElement != null)
+            {
+                int processId = focusedElement.Current.ProcessId;
+                using (Process process = Process.GetProcessById(processId))
+                {
+                    Debug.WriteLine(process.ProcessName);
+                }
+            }
+        }
+    }
     class BWare
     {
         public static string dcusername;
@@ -51,7 +76,8 @@ namespace Bucketware.Natives
             // Make Calculator the foreground application
             imports.SetForegroundWindow(handle);
         }
-
+        //DiscordRPC
+        //
         //public static MainForm mf;
         public static int inter;
         public const string WINDOW_NAME = "Growtopia";

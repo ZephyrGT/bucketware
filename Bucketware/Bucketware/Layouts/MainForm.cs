@@ -9,7 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Automation;
 using System.Windows.Forms;
+using System.Windows.Input;
 using Bucketware.Natives;
 using GrowbrewProxy;
 
@@ -89,7 +91,6 @@ namespace Bucketware.Layouts
         {
 
             this.Opacity = 98;
-            CheckForIllegalCrossThreadCalls = false;
             imports.GetWindowRect(imports.handle, out imports.rect);
             this.Left = imports.rect.left;
             this.Top = imports.rect.top;
@@ -113,6 +114,8 @@ namespace Bucketware.Layouts
             {
                 
             }
+            timer1.Start();
+            timer2.Start();
         }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
@@ -176,11 +179,25 @@ namespace Bucketware.Layouts
         {
             if (guna2CustomCheckBox34.Checked is true)
             {
-                BWare.inter = 5;
+                BWare.inter = 15;
+                timer2.Interval = 5000;
+                guna2Button1.Animated = false;
+                guna2Button2.Animated = false;
+                guna2Button3.Animated = false;
+                guna2Button4.Animated = false;
+                guna2Button5.Animated = false;
+                guna2Button6.Animated = false;
             }
             else
             {
                 BWare.inter = 0;
+                timer2.Interval = 2000;
+                guna2Button1.Animated = true;
+                guna2Button2.Animated = true;
+                guna2Button3.Animated = true;
+                guna2Button4.Animated = true;
+                guna2Button5.Animated = true;
+                guna2Button6.Animated = true;
             }
         }
         private void guna2CustomCheckBox3_CheckedChanged(object sender, EventArgs e)
@@ -239,6 +256,70 @@ namespace Bucketware.Layouts
 
         private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
         {
+        }
+
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+        /// <summary>
+        /// Focus not ready fully yet it
+        /// </summary>
+        public static string proc = "Growtopia";
+        public static void OnFocusChanged(object sender, AutomationFocusChangedEventArgs e)
+        {
+            AutomationElement focusedElement = sender as AutomationElement;
+            if (focusedElement != null)
+            {
+                int processId = focusedElement.Current.ProcessId;
+                using (Process process = Process.GetProcessById(processId))
+                {
+                    Console.WriteLine(process.ProcessName);
+                    proc = process.ProcessName;
+                }
+            }
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            bool w = false;
+            if (!proc.Contains("Growtopia"))
+            {
+                TopMost = false;
+            }
+            else
+            {
+                if (proc.Contains("Bucketware"))
+                {
+
+                }
+                else
+                {
+                    BringToFront();
+                    TopMost = true;
+                }
+            }
+            /* Console.WriteLine("1");
+             if ((ModifierKeys & Keys.Control) == Keys.Control)
+             {
+                 if (w is false)
+                 {
+                     this.WindowState = FormWindowState.Minimized;
+                     w = true;
+                 }
+                 else if (w is true)
+                 {
+                     this.WindowState = FormWindowState.Normal;
+                     w = false;
+                 }
+             }
+            */
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            AutomationFocusChangedEventHandler focusHandler = OnFocusChanged;
+            Automation.AddAutomationFocusChangedEventHandler(focusHandler);
         }
     }
 }

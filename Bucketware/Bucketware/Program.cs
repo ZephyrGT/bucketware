@@ -8,14 +8,15 @@ using DiscordRPC.Logging;
 using Bucketware.Layouts;
 using Bucketware.Natives;
 using Button = DiscordRPC.Button;
+using System.Timers;
+using System.Windows.Input;
+using System.Threading;
 
 namespace Bucketware
 {
     static class Program
     {
-        //DiscordRPC
-		//
-        static public DiscordRpcClient client;
+		static public DiscordRpcClient client;
 		static void Initialize()
 		{
 			client = new DiscordRpcClient("791017480063549470");
@@ -55,17 +56,19 @@ namespace Bucketware
 			});
 		}
 		[STAThread]
-        static void Main()
+		
+		static void Main()
         {
-            try
+			
+			try
             {
 				Initialize();//Initialize DiscordRPC
+				Thread.Sleep(1000);//Give discordrpc time to load things
 			}
             catch
             {
 
             }
-
 			Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Launcher());
