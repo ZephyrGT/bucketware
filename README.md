@@ -1,6 +1,9 @@
 [![Discord](https://img.shields.io/discord/769207196608102430?label=discord)](https://discord.gg/JaRmMmTsEN)
 [![ENet version](https://img.shields.io/badge/enet-1.3.17-green)](https://github.com/moien007/enet)
 ![Language](https://img.shields.io/github/languages/top/fyrax-exe/bucketware)
+## Dont use this project to steal accs...
+
+
 ## This project isnt ready!
 This project is still indev, so its not ready to use fully
 ## Bucketware
