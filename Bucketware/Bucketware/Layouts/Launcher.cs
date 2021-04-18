@@ -29,6 +29,7 @@ namespace Bucketware.Layouts
 
         private void Launcher_Load(object sender, EventArgs e)
         {
+            
             this.BringToFront();
             try
             {
@@ -41,6 +42,23 @@ namespace Bucketware.Layouts
                 //Growtopia is not running do nothing
             }
             label3.Text = "GT Location " + path;
+            try
+            {
+                if (!File.Exists("items.dat"))
+                {
+                    string fileToCopy = dir + @"\cache\items.dat";
+                    string destinationDirectory = "";
+                    File.Copy(fileToCopy, destinationDirectory + Path.GetFileName(fileToCopy));
+                    if (!File.Exists("CoreData.txt"))
+                    {
+                        Process.Start("Itemsdecoder.exe");
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Make sure that Itemsdecoder.exe is in same directery as Bucketware.exe");
+            }
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)

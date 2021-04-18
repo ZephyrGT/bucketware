@@ -14,6 +14,7 @@ namespace Bucketware
     static class Program
     {
         //DiscordRPC
+		//
         static public DiscordRpcClient client;
 		static void Initialize()
 		{
