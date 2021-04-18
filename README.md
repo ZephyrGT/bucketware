@@ -7,7 +7,7 @@ Free opensource growtopia autofarm/hack tool coded with c#, using enet for proxy
 Design inspired from Nightfarm
 ## Todo
 - [x] Add Proxy
-- [ ] Make proxy work able
+- [ ] Make proxy workable
 - [ ] Add Cheats
 - [ ] Add autofarm
 - [ ] Add Spammer
