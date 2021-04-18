@@ -5,7 +5,12 @@
 ## Bucketware
 Free opensource growtopia autofarm/hack tool coded with c#, using enet for proxy(Proxy - growbrew by playingodeerux)
 Design inspired from Nightfarm
-
+## Todo
+- [x] Add Proxy
+- [ ] Make proxy work able
+- [ ] Add Cheats
+- [ ] Add autofarm
+- [ ] Add Spammer
 # Features
 * Unbanner
 * Autofarm
