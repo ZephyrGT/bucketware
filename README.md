@@ -2,6 +2,7 @@
 [![ENet version](https://img.shields.io/badge/enet-1.3.17-green)](https://github.com/moien007/enet)
 ![Language](https://img.shields.io/github/languages/top/fyrax-exe/bucketware)
 ## This project isnt ready!
+This project is still indev, so its not ready to use fully
 ## Bucketware
 Free opensource growtopia autofarm/hack tool coded with c#, using enet for proxy(Proxy - growbrew by playingodeerux)
 Design inspired from Nightfarm
