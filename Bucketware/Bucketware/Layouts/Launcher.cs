@@ -49,10 +49,10 @@ namespace Bucketware.Layouts
                     string fileToCopy = dir + @"\cache\items.dat";
                     string destinationDirectory = "";
                     File.Copy(fileToCopy, destinationDirectory + Path.GetFileName(fileToCopy));
-                    if (!File.Exists("CoreData.txt"))
-                    {
-                        Process.Start("Itemsdecoder.exe");
-                    }
+                }
+                if (!File.Exists("CoreData.txt"))
+                {
+                    Process.Start("Itemsdecoder.exe");
                 }
             }
             catch

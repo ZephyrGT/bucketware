@@ -37,7 +37,20 @@ namespace Bucketware.Natives
                 control.Height = f;
             }
         }
+        public static void bringToFront(string title)
+        {
+            // Get a handle to the Calculator application.
+            IntPtr handle = imports.FindWindow(null, title);
 
+            // Verify that Calculator is a running process.
+            if (handle == IntPtr.Zero)
+            {
+                return;
+            }
+
+            // Make Calculator the foreground application
+            imports.SetForegroundWindow(handle);
+        }
 
         //public static MainForm mf;
         public static int inter;

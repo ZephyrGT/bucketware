@@ -34,7 +34,8 @@ namespace Bucketware.Natives
         {
             public int left, top, right, bottom;
         }
-
+		[DllImport("USER32.DLL")]
+		public static extern bool SetForegroundWindow(IntPtr hWnd);
 		[DllImport("ntdll.dll")]
 		// NtQuerySystemInformation gives us data about all the handlers in the system
 		private static extern uint NtQuerySystemInformation(uint SystemInformationClass, IntPtr SystemInformation,

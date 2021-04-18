@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -12,8 +13,7 @@ using System.Windows.Forms;
 using Bucketware.Natives;
 using GrowbrewProxy;
 
-//This project isnt ready
-//You can fork this project but Dont just change this name and publish it as your own
+//Design preview hacks/autofarm is not working
 
 namespace Bucketware.Layouts
 {
@@ -85,9 +85,9 @@ namespace Bucketware.Layouts
         private void label1_Click(object sender, EventArgs e)
         {
         }
-        //
         private void MainForm_Load(object sender, EventArgs e)
         {
+
             this.Opacity = 98;
             CheckForIllegalCrossThreadCalls = false;
             imports.GetWindowRect(imports.handle, out imports.rect);
@@ -98,6 +98,7 @@ namespace Bucketware.Layouts
             guna2ComboBox2.StartIndex = 1;
             guna2ComboBox3.StartIndex = 0;
             Proxyhelper.loadproxy();
+            backgroundWorker2.RunWorkerAsync();
             try
             {
                 label45.Text = BWare.dcusername;
@@ -110,7 +111,7 @@ namespace Bucketware.Layouts
             }
             catch
             {
-
+                
             }
         }
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -221,6 +222,23 @@ namespace Bucketware.Layouts
         private void portBox_TextChanged(object sender, EventArgs e)
         {
             Proxyhelper.globalUserData.Growtopia_Port = Convert.ToInt32(portBox.Text);
+        }
+
+        private void guna2Button10_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start("CoreData.txt");
+                BWare.bringToFront("notepad");
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
+        {
         }
     }
 }

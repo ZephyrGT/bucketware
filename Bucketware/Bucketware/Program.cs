@@ -25,8 +25,8 @@ namespace Bucketware
 			client.OnReady += (sender, e) =>
 			{
 				Console.WriteLine("Received Ready from user {0}", e.User.Username);
-				BWare.dcusername = e.User.Username;//Get discord username
-				BWare.dcavatar = e.User.GetAvatarURL(User.AvatarFormat.PNG, User.AvatarSize.x1024);//Get discord pfp
+				BWare.dcusername = e.User.Username;
+				BWare.dcavatar = e.User.GetAvatarURL(User.AvatarFormat.PNG, User.AvatarSize.x1024);
 				Console.WriteLine(BWare.dcavatar);
 			};
 
@@ -49,7 +49,7 @@ namespace Bucketware
 				},
 				Buttons = new Button[]
 				{
-					new Button() { Label = "Github", Url = "https://github.com/Fyrax-exe/bucketware" } //Add button to github
+					new Button() { Label = "Github", Url = "https://github.com/Fyrax-exe/bucketware" }
 				}
 
 			});

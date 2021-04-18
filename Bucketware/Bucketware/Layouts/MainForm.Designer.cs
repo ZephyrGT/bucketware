@@ -139,6 +139,9 @@ namespace Bucketware.Layouts
             this.guna2CustomCheckBox6 = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -346,6 +349,7 @@ namespace Bucketware.Layouts
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Location = new System.Drawing.Point(139, 5);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -355,6 +359,7 @@ namespace Bucketware.Layouts
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(64)))));
+            this.tabPage1.Controls.Add(this.guna2Button10);
             this.tabPage1.Controls.Add(this.guna2CirclePictureBox2);
             this.tabPage1.Controls.Add(this.label45);
             this.tabPage1.Controls.Add(this.portBox);
@@ -413,7 +418,7 @@ namespace Bucketware.Layouts
             this.portBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.portBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.portBox.HoverState.Parent = this.portBox;
-            this.portBox.Location = new System.Drawing.Point(17, 193);
+            this.portBox.Location = new System.Drawing.Point(14, 163);
             this.portBox.Multiline = true;
             this.portBox.Name = "portBox";
             this.portBox.PasswordChar = '\0';
@@ -432,7 +437,7 @@ namespace Bucketware.Layouts
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(14, 108);
+            this.label16.Location = new System.Drawing.Point(14, 99);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(312, 17);
             this.label16.TabIndex = 17;
@@ -508,7 +513,7 @@ namespace Bucketware.Layouts
             this.ipaddrBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ipaddrBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ipaddrBox.HoverState.Parent = this.ipaddrBox;
-            this.ipaddrBox.Location = new System.Drawing.Point(17, 147);
+            this.ipaddrBox.Location = new System.Drawing.Point(14, 119);
             this.ipaddrBox.Multiline = true;
             this.ipaddrBox.Name = "ipaddrBox";
             this.ipaddrBox.PasswordChar = '\0';
@@ -1986,6 +1991,39 @@ namespace Bucketware.Layouts
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
+            // guna2Button10
+            // 
+            this.guna2Button10.Animated = true;
+            this.guna2Button10.BorderRadius = 3;
+            this.guna2Button10.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(194)))), ((int)(((byte)(210)))));
+            this.guna2Button10.CheckedState.Parent = this.guna2Button10;
+            this.guna2Button10.CustomImages.Parent = this.guna2Button10;
+            this.guna2Button10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.guna2Button10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(64)))));
+            this.guna2Button10.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(194)))), ((int)(((byte)(210)))));
+            this.guna2Button10.HoverState.Parent = this.guna2Button10;
+            this.guna2Button10.Location = new System.Drawing.Point(17, 299);
+            this.guna2Button10.Name = "guna2Button10";
+            this.guna2Button10.ShadowDecoration.Parent = this.guna2Button10;
+            this.guna2Button10.Size = new System.Drawing.Size(116, 26);
+            this.guna2Button10.TabIndex = 21;
+            this.guna2Button10.Text = "Items ID";
+            this.guna2Button10.Click += new System.EventHandler(this.guna2Button10_Click);
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(64)))));
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(530, 342);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "tabPage6";
+            // 
+            // backgroundWorker2
+            // 
+            this.backgroundWorker2.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker2_DoWork);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2134,5 +2172,8 @@ namespace Bucketware.Layouts
         private Guna.UI2.WinForms.Guna2TextBox ipaddrBox;
         private System.Windows.Forms.Label label45;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button10;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
     }
 }
