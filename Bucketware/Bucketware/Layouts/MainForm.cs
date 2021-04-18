@@ -12,7 +12,8 @@ using System.Windows.Forms;
 using Bucketware.Natives;
 using GrowbrewProxy;
 
-//Design preview hacks/autofarm is not working
+//This project isnt ready
+//You can fork this project but Dont just change this name and publish it as your own
 
 namespace Bucketware.Layouts
 {
